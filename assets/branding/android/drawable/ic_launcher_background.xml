@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- وِرْد: four-cell icon from the design system (AppIcon). Generated; cell 24%, gap 5%, radius 28% of cell. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+  <path android:fillColor="#1C3F34" android:pathData="M0,0h108v108h-108z"/>
+</vector>

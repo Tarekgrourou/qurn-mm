@@ -1,0 +1,78 @@
+/* QURN-MM Design System 1.0 — tokens (source: tokens.json in the design system package).
+   Theme is always resolved to [data-theme="light"|"dark"] on <html> by applyTheme().
+   [data-hc="on"] = high-contrast state colours; [data-cvd="on"] adds pattern cues for colour-vision deficiency. */
+
+@font-face { font-family: 'Basis Arabic'; src: url('../fonts/BasisGrotesqueArabicPro-Light.ttf'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Basis Arabic'; src: url('../fonts/BasisGrotesqueArabicPro-Regular.ttf'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Basis Arabic'; src: url('../fonts/BasisGrotesqueArabicPro-Medium.ttf'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Basis Arabic'; src: url('../fonts/BasisGrotesqueArabicPro-Bold.ttf'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Plex'; src: url('../fonts/IBMPlexSansArabic-Regular.ttf'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Plex'; src: url('../fonts/IBMPlexSansArabic-Medium.ttf'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Plex'; src: url('../fonts/IBMPlexSansArabic-SemiBold.ttf'); font-weight: 600; font-display: swap; }
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg-base: #F3F4F0; --bg-subtle: #ECEEE9; --bg-elevated: #FFFFFF; --bg-strong: #15302A;
+  --surface: #FFFFFF; --surface-subtle: #EBEDE7; --surface-raised: #FFFFFF; --surface-sunken: #E5E8E2; --surface-selected: #DDEDE4; --surface-strong: #15302A; --surface-brand: #1C3F34;
+  --tx-1: #131715; --tx-2: #4A514C; --tx-3: #666D68; --tx-inv: #FFFFFF; --tx-dis: #A5AAA4; --tx-on-strong: #EDF4EF; --tx-on-strong-2: #A9C2B5;
+  --bd-1: #E1E4DE; --bd-2: #D0D4CD; --bd-3: #959C96;
+  --brand: #1C3F34; --brand-hover: #15302A; --brand-press: #0C1E1A; --brand-subtle: #E1EEE6; --brand-subtle-press: #CCE2D5; --on-brand: #FFFFFF; --brand-text: #2C634E; --clay-text: #A05236; --focus: #32767E;
+  --f-mint: #D9F2E6; --f-aqua: #D8EEF0; --f-blue: #E0E8F5; --f-lav: #E7E5F4; --f-sage: #E3EADD; --f-clay: #F4E2D8;
+  --i-mint: #1C5142; --i-aqua: #244C52; --i-blue: #303F63; --i-lav: #423B61; --i-sage: #384435; --i-clay: #693728;
+  --m-empty: #E2E5DF; --m-strong: #234F40; --m-medium: #5E9A7E; --m-medium-bg: #D3E6DA; --m-weak: #BD6644; --m-weak-bg: #F3DED3; --m-due: #665C98; --m-recent: #4F72B0; --m-sel: #131715; --m-outline: transparent;
+  --fb-success-fg: #1C5142; --fb-success-bg: #E0F2E8; --fb-success-bd: #B7DEC9; --fb-success-ic: #288063;
+  --fb-warning-fg: #82422D; --fb-warning-bg: #F8E9E0; --fb-warning-bd: #EBC6B4; --fb-warning-ic: #BD6644;
+  --fb-error-fg: #8A3324; --fb-error-bg: #F8E4DF; --fb-error-bd: #EDBFB4; --fb-error-ic: #B4462F;
+  --fb-info-fg: #303F63; --fb-info-bg: #E3EAF6; --fb-info-bd: #C0D1EA; --fb-info-ic: #47629A;
+  --g-mint: radial-gradient(120% 90% at 85% 0%, #CDEEDD 0%, rgba(205,238,221,0) 60%), radial-gradient(90% 80% at 10% 40%, #D4ECF1 0%, rgba(212,236,241,0) 65%), #F7F8F5;
+  --g-sage: linear-gradient(180deg, #E1E9DA 0%, #F7F7F3 100%);
+  --g-lav: radial-gradient(100% 100% at 100% 0%, #E4E1F5 0%, rgba(228,225,245,0) 70%), linear-gradient(180deg, #F4F4F8, #F6F7F5);
+  --g-blue: linear-gradient(135deg, #D3F0E2 0%, #DAE4F5 100%);
+  --g-deep: radial-gradient(120% 100% at 90% 0%, #2F6A55 0%, rgba(47,106,85,0) 60%), linear-gradient(160deg, #15302A 0%, #0C1E1A 100%);
+  --g-clay: radial-gradient(110% 90% at 90% 0%, #F2D9CB 0%, rgba(242,217,203,0) 65%), #F7F5F1;
+  --e1: 0 1px 2px rgba(20,32,26,.04), 0 2px 8px rgba(20,32,26,.04);
+  --e2: 0 2px 4px rgba(20,32,26,.04), 0 8px 24px rgba(20,32,26,.07);
+  --e3: 0 4px 8px rgba(20,32,26,.04), 0 18px 44px rgba(20,32,26,.10);
+  --eo: 0 28px 72px rgba(12,24,18,.20), 0 4px 12px rgba(12,24,18,.06);
+  --scrim: rgba(14,22,18,.36); --hl: inset 0 0 0 0 transparent;
+  --skel: #E4E7E1; --skel-hi: #F0F2EE;
+  --rk-error: #B4462F; --rk-omitted: #665C98; --rk-hes: #F8E9E0; /* recite.mark.* */
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-base: #0E1311; --bg-subtle: #121815; --bg-elevated: #19201D; --bg-strong: #1D3A30;
+  --surface: #161D1A; --surface-subtle: #131916; --surface-raised: #1E2622; --surface-sunken: #0A0E0C; --surface-selected: #1F3A30; --surface-strong: #1D3A30; --surface-brand: #24493C;
+  --tx-1: #ECF0ED; --tx-2: #B3BCB6; --tx-3: #8D9791; --tx-inv: #0E1311; --tx-dis: #4E5853; --tx-on-strong: #ECF3EE; --tx-on-strong-2: #A3C0B2;
+  --bd-1: #212A26; --bd-2: #2D3833; --bd-3: #5A6860;
+  --brand: #8FD1B3; --brand-hover: #A3DCC2; --brand-press: #76BD9D; --brand-subtle: #1D332A; --brand-subtle-press: #264337; --on-brand: #0C1E1A; --brand-text: #8FD1B3; --clay-text: #E3A383; --focus: #82C7CC;
+  --f-mint: #173128; --f-aqua: #162D30; --f-blue: #1A2335; --f-lav: #211F33; --f-sage: #1D241B; --f-clay: #2E1E17;
+  --i-mint: #A9E6CB; --i-aqua: #AEDDE0; --i-blue: #C0D1EA; --i-lav: #D2CEE9; --i-sage: #CBD8C3; --i-clay: #EBC6B4;
+  --m-empty: #232B27; --m-strong: #7CC4A3; --m-medium: #3E7D62; --m-medium-bg: #1B3128; --m-weak: #D58A64; --m-weak-bg: #3A2720; --m-due: #ABA3E6; --m-recent: #8EB0EA; --m-sel: #ECF0ED; --m-outline: transparent;
+  --fb-success-fg: #A9E6CB; --fb-success-bg: #15302A; --fb-success-bd: #24493C; --fb-success-ic: #7BD4AE;
+  --fb-warning-fg: #EBC6B4; --fb-warning-bg: #2E1E17; --fb-warning-bd: #4F3226; --fb-warning-ic: #DEA488;
+  --fb-error-fg: #F0B9AC; --fb-error-bg: #331A16; --fb-error-bd: #55291F; --fb-error-ic: #E58C77;
+  --fb-info-fg: #C0D1EA; --fb-info-bg: #19223A; --fb-info-bd: #2B3A5C; --fb-info-ic: #9AB5DC;
+  --g-mint: radial-gradient(120% 90% at 85% 0%, #1B3F33 0%, rgba(27,63,51,0) 60%), radial-gradient(90% 80% at 10% 40%, #17343A 0%, rgba(23,52,58,0) 65%), #121815;
+  --g-sage: linear-gradient(180deg, #1C241B 0%, #0E1311 100%);
+  --g-lav: radial-gradient(100% 100% at 100% 0%, #262240 0%, rgba(38,34,64,0) 70%), #0E1311;
+  --g-blue: linear-gradient(135deg, #173128 0%, #1A2335 100%);
+  --g-deep: radial-gradient(120% 100% at 90% 0%, #2B5C4A 0%, rgba(43,92,74,0) 60%), linear-gradient(160deg, #173229 0%, #0B1613 100%);
+  --g-clay: radial-gradient(110% 90% at 90% 0%, #3A2419 0%, rgba(58,36,25,0) 65%), #0E1311;
+  --e1: 0 1px 2px rgba(0,0,0,.30); --e2: 0 8px 24px rgba(0,0,0,.36); --e3: 0 18px 44px rgba(0,0,0,.46); --eo: 0 28px 72px rgba(0,0,0,.62);
+  --scrim: rgba(0,0,0,.56); --hl: inset 0 1px 0 rgba(255,255,255,.045);
+  --skel: #1E2622; --skel-hi: #28312C;
+  --rk-error: #E58C77; --rk-omitted: #ABA3E6; --rk-hes: #2E1E17;
+}
+
+/* High-contrast state colours: an outline on every map cell and deeper markers. */
+[data-hc="on"] { --m-outline: #131715; --m-empty: #FFFFFF; --m-due: #3F3580; --m-recent: #2A4E96; --m-medium: #3F7A60; --m-weak: #9A4A2C; }
+[data-hc="on"][data-theme="dark"] { --m-outline: #ECF0ED; --m-empty: #0E1311; --m-due: #C9C3F5; --m-recent: #B3CBF3; --m-medium: #5FA585; --m-weak: #EBA27C; }
+
+:root {
+  --font: 'Basis Arabic', 'Plex', sans-serif;
+  --latin: 'Plex', sans-serif;
+  --r-xs: 4px; --r-s: 10px; --r-m: 16px; --r-l: 20px; --r-xl: 28px; --r-xxl: 36px;
+  --ease: cubic-bezier(.2, 0, 0, 1); --ease-emph: cubic-bezier(.32, .72, 0, 1); --ease-exit: cubic-bezier(.4, 0, 1, 1);
+  --t-instant: 90ms; --t-fast: 160ms; --t-std: 240ms; --t-emph: 360ms; --t-slow: 600ms;
+}

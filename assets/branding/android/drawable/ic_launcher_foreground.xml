@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- وِرْد: four-cell icon from the design system (AppIcon). Generated; cell 24%, gap 5%, radius 28% of cell. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+  <path android:fillColor="#8FD1B3" android:pathData="M60.638,34.92H68.242A4.838,4.838 0 0 1 73.08,39.758V47.362A4.838,4.838 0 0 1 68.242,52.2H60.638A4.838,4.838 0 0 1 55.8,47.362V39.758A4.838,4.838 0 0 1 60.638,34.92Z"/>
+  <path android:fillColor="#2C634E" android:pathData="M39.758,34.92H47.362A4.838,4.838 0 0 1 52.2,39.758V47.362A4.838,4.838 0 0 1 47.362,52.2H39.758A4.838,4.838 0 0 1 34.92,47.362V39.758A4.838,4.838 0 0 1 39.758,34.92Z"/>
+  <path android:fillColor="#8FD1B3" android:pathData="M34.92,43.56H52.2V47.362A4.838,4.838 0 0 1 47.362,52.2H39.758A4.838,4.838 0 0 1 34.92,47.362Z"/>
+  <path android:fillColor="#2C634E" android:pathData="M60.638,55.8H68.242A4.838,4.838 0 0 1 73.08,60.638V68.242A4.838,4.838 0 0 1 68.242,73.08H60.638A4.838,4.838 0 0 1 55.8,68.242V60.638A4.838,4.838 0 0 1 60.638,55.8Z"/>
+  <path android:fillColor="#DEA488" android:pathData="M55.8,67.205H73.08V68.242A4.838,4.838 0 0 1 68.242,73.08H60.638A4.838,4.838 0 0 1 55.8,68.242Z"/>
+  <path android:fillColor="#2C634E" android:pathData="M39.758,55.8H47.362A4.838,4.838 0 0 1 52.2,60.638V68.242A4.838,4.838 0 0 1 47.362,73.08H39.758A4.838,4.838 0 0 1 34.92,68.242V60.638A4.838,4.838 0 0 1 39.758,55.8Z"/>
+</vector>

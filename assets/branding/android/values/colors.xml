@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Brand colours sampled from the approved artwork. -->
+<resources>
+    <color name="wird_green">#315D4B</color>
+    <color name="wird_offwhite">#EEEEE7</color>
+    <color name="wird_splash_background">#FAF9F6</color>
+</resources>

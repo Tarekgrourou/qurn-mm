@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- DEVELOPMENT PREVIEW ONLY. Hosts the real app (preview-app.html) in one 412×915 viewport,
+     with a Reset control outside the phone. Not part of the وِرْد UI. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>وِرْد · live preview</title>
+<link rel="icon" href="assets/branding/svg/wird_icon_dark.svg" type="image/svg+xml">
+<link rel="icon" href="assets/branding/png/favicon_32.png" sizes="32x32" type="image/png">
+<style>
+  :root { --bg: #ECEAE4; --ink: #202522; --muted: #5C635E; --line: #C9CCC6; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--bg); color: var(--ink); font: 13px/1.4 system-ui, sans-serif; display: flex; flex-direction: column; align-items: center; overflow: hidden; }
+  .bar { flex: none; width: 412px; max-width: calc(100% - 32px); display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; }
+  .bar span { color: var(--muted); }
+  .bar button { font: inherit; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; }
+  .bar button:hover { border-color: var(--muted); }
+  .stage { flex: 1; min-height: 0; width: 100%; display: flex; justify-content: center; }
+  .phone { width: 412px; height: 915px; border: 0; border-radius: 24px; background: #FAF9F6; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 12px 40px rgba(0,0,0,.08); transform-origin: top center; flex: none; }
+</style>
+</head>
+<body>
+<div class="bar"><span><span lang="ar">وِرْد</span> · live preview (development only)</span><button id="reset" type="button">Reset preview</button></div>
+<div class="stage"><iframe class="phone" id="phone" src="preview-app.html" title="وِرْد"></iframe></div>
+<script>
+  const phone = document.getElementById('phone');
+  // Keep the 412×915 viewport intact; scale it down only when the window is shorter.
+  function fit() {
+    const avail = window.innerHeight - 56 - 16, s = Math.min(1, avail / 915, (window.innerWidth - 32) / 412);
+    phone.style.transform = s < 1 ? `scale(${s})` : '';
+    phone.style.marginBottom = s < 1 ? `${-915 * (1 - s)}px` : '';
+  }
+  addEventListener('resize', fit);
+  fit();
+  document.getElementById('reset').addEventListener('click', () => {
+    try { localStorage.removeItem('qurn-mm-preview'); } catch (e) { /* storage unavailable */ }
+    phone.contentWindow.location.reload();
+  });
+</script>
+</body>
+</html>
